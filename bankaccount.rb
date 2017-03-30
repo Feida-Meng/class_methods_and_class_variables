@@ -1,33 +1,47 @@
 class Bankaccount
 
 #class
-  @@accounts = []
-  @@total_funds = 0
 
-  def self.create
-    @@accounts.push(Bankaccount.new)
+  @@accounts = []
+  @@interest_rate = 0.20
+
+  def self.all_accounts
+    @@accounts
+  end
+
+  def self.create(x)
+    x = Bankaccount.new
+    @@accounts.push(x)
   end
 
   def self.total_funds
+    total = 0
+    @@accounts.each do |acc|
 
-
-    @@accounts.each do |account|
-
-        @@total_funds += @@account.@balance
+      puts  total += acc.balance
 
     end
 
   end
 
-  def self.interest_time
+  def self.interest_time(i)
+
+    @@interest_rate = i
+    @@accounts.each do |acc|
+
+    acc.interest_add(@@interest_rate)
+
+    end
 
   end
 
 #instance
+  attr_reader :balance
 
   def initialize
 
     @balance = 0.00
+    @interest_rate = 0.00
 
   end
 
@@ -39,7 +53,10 @@ class Bankaccount
     @balance -= m_out.to_f
   end
 
-
+  def interest_add (i)
+    @interest_rate = i
+    @balance += i * @balance
+  end
 
 end
 
