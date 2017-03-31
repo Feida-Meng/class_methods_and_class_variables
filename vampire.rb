@@ -16,6 +16,7 @@ class Vampire
 
   end
 
+
   def initialize(name,age)
     @name = name
     @age = age
@@ -30,6 +31,10 @@ class Vampire
 
   def go_home
     @in_coffin = true
+  end
+
+  def hunting
+    drink_blood if rand(10) > 3
   end
 
 end
