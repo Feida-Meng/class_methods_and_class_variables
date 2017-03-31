@@ -24,13 +24,20 @@ class Zombie
 
   def self.spawn
     @@plague_level = rand(10)
+
     @@plague_level.times do
       @@horde.push(Zombie.new( rand(@@max_speed),rand(@@max_strength) ) )
     end
+
+    deadliest_zombie if rand(10) == 10
+  end
+
+  def deadliest_zombie
+    @@horde.push( Zombie.new(@@max_speed,@@max_strength) )
   end
 
   def self.increse_plague_level
-    @@plague_level += rand(2)
+    @@plague_level +=  (rand(2) + @@horde.length / 2 )
   end
 
   attr_reader :speed, :strength
