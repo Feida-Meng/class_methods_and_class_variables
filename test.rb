@@ -21,26 +21,37 @@
 # Bankaccount.total_funds
 
 
-require_relative "book"
-Book.create("starwarsI","Lucas","ISBN434523452")
-Book.create("starwarsII","Lucas","ISBN434523453")
-Book.create("starwarsIII","Lucas","ISBN434523454")
+# require_relative "book"
+# Book.create("starwarsI","Lucas","ISBN434523452")
+# Book.create("starwarsII","Lucas","ISBN434523453")
+# Book.create("starwarsIII","Lucas","ISBN434523454")
+#
+# Book.display_available
+# book = Book.find_available("blah")
+# book.borrow
+#
+# puts "Book available: #{Book.available}"
+# star_wars = Book.available
+# star_wars.borrow
+# Book.available[0].borrow
+# Book.available[0].borrow
+# puts "Book available: #{Book.available}"
+#
+# puts "Book available: #{Book.borrowed}"
+# puts Book.available
+# Book.borrowed[0].borrow
+# Book.borrowed[0].borrow
+# Book.borrowed[0].borrow
+# puts "Book available: #{Book.borrowed}"
+# puts "Book available: #{Book.available}"
 
-Book.display_available
-book = Book.find_available("blah")
-book.borrow
-
-puts "Book available: #{Book.available}"
-star_wars = Book.available
-star_wars.borrow
-Book.available[0].borrow
-Book.available[0].borrow
-puts "Book available: #{Book.available}"
-
-puts "Book available: #{Book.borrowed}"
-puts Book.available
-Book.borrowed[0].borrow
-Book.borrowed[0].borrow
-Book.borrowed[0].borrow
-puts "Book available: #{Book.borrowed}"
-puts "Book available: #{Book.available}"
+# require_relative "zombie"
+#
+# Zombie.new_day
+# puts Zombie.all.inspect
+#
+# puts Zombie.all.length
+#
+# Zombie.all.each do |zombie|
+#   zombie.encounter
+# end

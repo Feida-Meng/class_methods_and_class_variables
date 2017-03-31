@@ -34,10 +34,6 @@ class Book
 
   end
 
-  # def self.display_available
-  #   @@on_shelf.map {|book| book.title}
-  # end
-
   def self.update_shelf(shelf)
     @@on_shelf = shelf
   end
